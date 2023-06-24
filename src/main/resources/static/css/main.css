@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+	--cor-um: #202026;
+	--cor-dois: #5ABF7D;
+	--cor-tres: #51A66F;
+	--cor-quatro: #A68A56;
+	--cor-cinco: #10403B;
+
+
+	--cor-info: #33D8E8;
+	--cor-confirmar: #84F52F;
+	--cor-alertar: #FFE500;
+	--cor-perigo: #FF003D;
+	--cor-info2: #FF9B21;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+header,
+main,
+footer {
+	padding: 2vh 10vw;
+}
+
+header {
+	background: var(--cor-um);
+}
+
+input{
+	padding: 10px 1vw;
+}
+button:hover{
+	cursor: pointer;
+}
+.cabecalho {
+	display: flex;
+	gap: 2vh;
+	flex-direction: column;
+	padding-bottom: 2vh;
+}
+.cabecalho_obra{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2vw;
+}
+.cabecalho_obra h1{
+	color: white; 
+}
+.cabecalho_obra_logo {
+	display: flex;
+	justify-content: center;
+}
+
+.cabecalho_obra_logo img {
+	filter: invert();
+	height: 100px;
+}
+
+.cabecalho_navegacao nav {
+	display: flex;
+	font-weight: bold;
+	gap: 5vw;
+	justify-content: space-around;
+	text-align: center;
+	flex-wrap: wrap;
+	font-size: 1rem;
+	color: var(--cor-tres);
+}
+
+.cabecalho_navegacao a {
+	text-decoration: none;
+	color: var(--cor-tres);
+}
+
+.cabecalho_navegacao a:hover,
+.cabecalho_navegacao .ativado {
+	color: var(--cor-dois);
+}
+
+main {
+	background: var(--cor-tres);
+	padding-top: 2vh;
+}
+
+footer {
+	background: var(--cor-dois);
+	padding-top: 2vh;
+}
+
+.rodape {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.rodape img {
+	max-width: 5vw;
+}
+
+button {
+	border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+	header,
+	main,
+	footer {
+		padding: 2vh 2vw;
+	}
+}

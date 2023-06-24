@@ -1,0 +1,76 @@
+.sairHistorio{
+    text-align: end;
+    font-size: 20px;
+}
+.historicoEQP {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.historicoEQP_titulo {
+    border-top: 0.7vh solid;
+    border-bottom: 0.7vh solid;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+.historicoEQP_resumo_tabela table{
+    width: 100%;
+    text-align: center;
+    color: var(--cor-tres);
+}
+
+.historicoEQP_resumo_tabela th{
+    background: black;
+
+} 
+.historicoEQP_resumo_tabela tbody tr:nth-child(odd) {
+    background-color: var(--cor-quatro);
+}
+
+.historicoEQP_resumo_tabela tbody  tr:nth-child(even) {
+    background-color: var(--cor-cinco);
+}
+
+.historicoEQP_detalhado{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.historicoEQP_detalhado_maquina_hora {
+    padding-left: 20px;
+    border-bottom: 0.1vw dotted var(--cor-um);
+}
+
+
+.corpo_tabela_cabecalho {
+    background: black;
+    color: white;
+}
+
+.vazio {
+    color: red;
+}
+
+.inicioParada {
+    color: green;
+}
+
+.pausa {
+    color: black;
+    font-weight: bold;
+}
+
+.fimParada {
+    color: blue;
+}
+
+
+@media  (max-width:768px){
+    .historicoEQP_resumo_tabela {
+        overflow-x: scroll;
+    }
+}

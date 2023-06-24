@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html th:fragment="cabecalho(title,links, main)">
+
+<head>
+	<title th:replace="${title}">Pagina Inicial</title>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="/css/main.css">
+	<th:block th:replace="${links}" />
+</head>
+
+<body>
+	<header>
+		<section class="cabecalho">
+			<div class="cabecalho_obra">
+				<div class="cabecalho_obra_logo">
+					<img src="./imagens/logo.png" alt="Logo da Throne">
+				</div>
+				<div class="cabecalho_obra_nome">
+					<h1>| Bacias de Drenagem</h1>
+				</div>
+			</div>
+			<div class="cabecalho_navegacao">
+				<nav>
+					<a th:href="@{/financeiro}" data-titulo="Financeiro">Financeiro</a>
+
+				</nav>
+			</div>
+		</section>
+	</header>
+	<main th:replace="${main}">
+	</main>
+	<footer>
+		<section class="rodape">
+			<img src="./imagens/logo-rh.png" alt="Logo de Robert Hichert">
+			<h6>Desenvolvido por Robert Hichert Vieira Nascimento</h6>
+		</section>
+	</footer>
+	<script src="/javascript/main.js"></script>
+</body>
+
+</html>

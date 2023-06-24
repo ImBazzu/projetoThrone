@@ -1,0 +1,276 @@
+main,
+.menu,
+.formulario,
+.filtro,
+.tabela {
+	display: flex;
+	flex-direction: column;
+	gap: 3vh;
+}
+
+.menu,
+.filtro,
+.tabela {
+	text-align: center;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+}
+
+#btCadastrar {
+	background: var(--cor-cinco);
+	color: white;
+}
+
+#btSelecionado {
+	background: var(--cor-quatro);
+	color: white;
+}
+
+button {
+	font-size: 1em;
+	padding: 2px 1vw;
+}
+
+.menu button {
+	width: 100%;
+}
+
+.formulario {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1;
+}
+
+.formulario hr {
+	margin: 3vh 0px;
+}
+
+.modal {
+	background: white;
+	padding: 20px;
+	width: 80%;
+	height: 450px;
+	margin: 5% auto;
+}
+
+.modal_notafiscal {
+	padding: 5px;
+}
+
+.modal_btnfechar {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 2vh;
+}
+
+.modal_btnfechar button {
+	width: 5vw;
+	font-size: 20px;
+}
+
+.modal_titulo {
+	text-align: center;
+}
+
+.modal_input {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	padding: 1vh 0px;
+	margin: 3vh 0px;
+}
+
+.modal_input input {
+	height: 5vh;
+
+}
+
+.modal_input_duas {
+	display: flex;
+	justify-content: space-between;
+	gap: 1vh;
+}
+
+.modal_input_duas_inputs {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	gap: 1vh;
+}
+
+.modal_formulario {
+	margin: 2vh 0px;
+}
+
+.modal_botao {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menufiltrar {
+	display: flex;
+	gap: 20px;
+}
+
+#form_btnsalvar {
+	background: var(--cor-confirmar);
+	width: 100%;
+}
+
+.modal_input_FP {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 1vw;
+	align-items: center;
+}
+
+.modal_input_duas_inputs_radio {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	height: 100%;
+	justify-content: space-around;
+}
+
+.menufiltrar input {
+	width: 100%;
+}
+
+.btnPendente,
+.btnPago {
+	background: white;
+	width: 100%;
+	padding: 4px;
+}
+
+.tabela_conteudo {
+	border-collapse: collapse;
+	border: var(--cor-um) solid;
+	width: 100%;
+}
+
+.tabela_cabecalho tr,
+.tabRodape {
+	background: var(--cor-um);
+	color: white;
+	font-weight: bold;
+}
+
+.tabela_conteudo tr {
+	border: 1px solid;
+}
+
+.bo {
+	background: var(--cor-alertar);
+}
+
+.cb {
+	background: var(--cor-info);
+}
+
+.tabela_corpo td {
+	padding: 10px;
+}
+
+.tabButoes {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.tabButoes button {
+	width: 100%;
+}
+
+.btnSelecionar {
+	background: var(--cor-confirmar);
+	font-weight: bold;
+}
+
+.btnMenuFiltrar {
+	display: flex;
+	flex-direction: row;
+	gap: 3vw;
+
+}
+
+.tabButoes_Pendente {
+	background: var(--cor-quatro);
+}
+
+.tabButoes_apagar{
+	background: var(--cor-perigo);
+}
+
+.tabButoes_Pago {
+	background: var(--cor-confirmar);
+}
+
+.tabela_butao {
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+	justify-content: center;
+}
+
+@media(max-width:768px) {
+	thead {
+		display: none;
+	}
+
+	.tabButoes {
+		justify-content: flex-end;
+		float: right;
+
+	}
+
+	.tabButoes button {
+		width: 20vw;
+	}
+
+	.bo,
+	.cb {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: right;
+		float: right;
+	}
+
+	.tabela_corpo td::before {
+		content: attr(data-cabecalho) ": ";
+		font-weight: bold;
+		float: left;
+	}
+
+	.modal_input_duas div {
+		width: 100%;
+	}
+
+	.modal_input_duas {
+		flex-direction: column;
+	}
+
+	.modal {
+		height: 95%;
+	}
+
+	.tabela {
+		overflow-x: auto;
+	}
+
+	tfoot td:not(.tabRodape_mostrar) {
+		display: none;
+	}
+
+}

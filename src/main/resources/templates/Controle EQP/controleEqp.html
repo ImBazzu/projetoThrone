@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html th:replace="~{ layout :: cabecalho(~{::title},~{::link},~{::main})}">
+
+<head>
+    <title>Controle EQP</title>
+    
+    <link rel="stylesheet" href="/css/controleEQP.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <section class="historicoEQP">
+                <section class="sairHistorio">
+
+                    <h1>Voltar</h1>
+
+                </section>
+                <section class="historicoEQP_titulo">
+                    <div>
+                        <h1>PRESTAÇÃO DE CONTAS - PERIODO: 04/04/2023 A 27/04/23</h1>
+                        <h2> JOTA LOCACOES</h2>
+                    </div>
+                </section>
+
+                <section class="historicoEQP_resumo">
+                    <h2>1-Resumo</h2>
+                    <div class="historicoEQP_resumo_tabela">
+                        <table>
+                            <thead>
+                                <tr class="historicoEQP_resumo_tabela_cabecalho">
+                                    <th>Maquina</th>
+                                    <th>Operador</th>
+                                    <th>Horas Paradas</th>
+                                    <th>Valor por Hora</th>
+                                    <th>Valor Desconto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Retroescavadeira</td>
+                                    <td>Robert</td>
+                                    <td>18 horas</td>
+                                    <td>100 reais/hora</td>
+                                    <td>R$ 1.800,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Pá Carregadeira</td>
+                                    <td>Hichert</td>
+                                    <td>18 horas</td>
+                                    <td>200 reais/hora</td>
+                                    <td>R$ 3.600,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Pá Carregadeira</td>
+                                    <td>Vieira</td>
+                                    <td>18 horas</td>
+                                    <td>200 reais/hora</td>
+                                    <td>R$ 3.600,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Autobetoneira</td>
+                                    <td>Nascimento</td>
+                                    <td>18 horas</td>
+                                    <td>200 reais/hora</td>
+                                    <td>R$ 3.600,00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <th></th>
+                                    <th>72 horas</th>
+                                    <th></th>
+                                    <th>R$ 12.600,00</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="historicoEQP_detalhado">
+                    <h2>2-Horas Paradas Detalhadas</h2>
+
+                    <div class="historicoEQP_detalhado_maquina">
+                        <h3>Retroescavadeira: 18horas </h3>
+                        <p>Pneu estourou</p>
+                        <div class="historicoEQP_detalhado_maquina_hora">
+                            <ul class="diaMaquina">
+                                <li class="inicioParada">13/04/1999: Inicio da parada
+                                    <ul class="horaMaquina">
+                                        <li class="vazio"></li>
+                                        <li class="vazio">5 horas</li>
+                                        <li class="vazio"></li>
+                                        <li class="pausa">12h Pausa do Almoço | 13h Retorno das Atividades</li>
+                                        <li class="vazio"></li>
+                                        <li class="vazio">4 horas</li>
+                                        <li class="vazio"></li>
+                                    </ul>
+                                </li>
+                                <li>13/04/1999: Fim do Dia</li>
+                                <li>14/04/1999: Inicio do Dia
+                                    <ul class="horaMaquina">
+                                        <li class="vazio"></li>
+                                        <li class="vazio">5 horas</li>
+                                        <li class="vazio"></li>
+                                        <li class="pausa">12h Pausa do Almoço | 13h Retorno das Atividades</li>
+                                        <li class="vazio"></li>
+                                        <li class="vazio">4 horas</li>
+                                        <li class="vazio"></li>
+                                    </ul>
+                                </li>
+                                <li class="fimParada">14/04/1999: Fim da Parada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="historicoEQP_detalhado_maquina">
+                        <h3>Pá Carregadeira: 18horas </h3>
+                        <p>Pneu estourou</p>
+                        <div class="historicoEQP_detalhado_maquina_hora">
+                            <ul class="diaMaquina">
+                                <li class="inicioParada">13/04/1999: Inicio da parada
+                                    <ul class="horaMaquina">
+                                        <li class="vazio"></li>
+                                        <li class="vazio">5 horas</li>
+                                        <li class="vazio"></li>
+                                        <li class="pausa">12h Pausa do Almoço | 13h Retorno das Atividades</li>
+                                        <li class="vazio"></li>
+                                        <li class="vazio">4 horas</li>
+                                        <li class="vazio"></li>
+                                    </ul>
+                                </li>
+                                <li>13/04/1999: Fim do Dia</li>
+                                <li>14/04/1999: Inicio do Dia
+                                    <ul class="horaMaquina">
+                                        <li class="vazio"></li>
+                                        <li class="vazio">5 horas</li>
+                                        <li class="vazio"></li>
+                                        <li class="pausa">12h Pausa do Almoço | 13h Retorno das Atividades</li>
+                                        <li class="vazio"></li>
+                                        <li class="vazio">4 horas</li>
+                                        <li class="vazio"></li>
+                                    </ul>
+                                </li>
+                                <li class="fimParada">14/04/1999: Fim da Parada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+    </main>
+</body>
+
+</html>

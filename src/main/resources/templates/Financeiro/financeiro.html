@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html th:replace="~{ layout :: cabecalho(~{::title},~{::link},~{::main})}">
+
+<head>
+	<title>Financeiro</title>
+	<link rel="stylesheet" href="/css/financeiro.css">
+
+
+</head>
+
+<body>
+
+	<main>
+		<div class="menu">
+			<button id="btCadastrar">CADASTRAR OBRIGAÇÃO</button>
+		</div>
+		<div class="formulario">
+			<div class="modal">
+				<div class="modal_btnfechar">
+					<button id="btFecharForm">
+						X
+					</button>
+				</div>
+				<div class="modal_titulo">
+					<h2>Cadastrar Obrigação</h2>
+
+				</div>
+				<hr />
+				<form id="formObrigacao" method="post">
+					<div class="modal_NotaFiscal">
+
+						<div class="modal_input">
+							<label>Nome:</label>
+							<input type="text" name="nome" required />
+							<label>Descrição:</label>
+							<input type="text" name="descricao" />
+							<div class="modal_input_duas">
+								<div class="modal_input_duas_inputs">
+									<label>Forma de Pagamento:</label>
+
+									<fieldset class="modal_input_duas_inputs_radio">
+
+										<div class="modal_input_FP">
+											<label>Conta Bancária:</label>
+											<input type="radio" value="CB" name="fp" required>
+										</div>
+										<div class="modal_input_FP">
+											<label>Boleto:</label>
+											<input type="radio" value="BO" name="fp" required>
+										</div>
+									</fieldset>
+
+								</div>
+								<div class="modal_input_duas_inputs">
+									<label>Vencimento:</label>
+									<input type="date" name="vencimento" required />
+								</div>
+								<div class="modal_input_duas_inputs">
+									<label>Valor:</label>
+									<input type="number" step="0.01" name="valor" required />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr />
+					<div class="modal_botao">
+						<button id="form_btnsalvar" type="submit">
+							Salvar
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="filtro">
+			<form id="formFiltro" class="menufiltrar">
+				<input id="txtFiltro" placeholder="Digitar Para filtrar" />
+				<button type="submit">FILTRAR</button>
+			</form>
+		</div>
+
+
+		<section class="tabela">
+			<div class="btnMenuFiltrar">
+				<button id="btnPendente" class="btnPendente">OBRIGAÇÕES PENDENTES</button>
+				<button id="btnPago" class="btnPago">OBRIGAÇÕES PAGAS</button>
+			</div>
+			<div>
+				<table class="tabela_conteudo">
+					<thead class="tabela_cabecalho">
+						<tr>
+							<th>Nome </th>
+							<th>Descrição</th>
+							<th>Vencimento</th>
+							<th>Valor</th>
+							<th>F.P</th>
+							<th>#</th>
+						</tr>
+					</thead>
+					<tbody class="tabela_corpo">
+					</tbody>
+					<tfoot>
+						<tr class="tabRodape">
+							<td>Total:</td>
+							<td></td>
+							<td></td>
+							<td class="tabRodape_mostrar" data-cabecalho="Valor Total" id="somaValorTotal">R$ 1.000,00</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tfoot>
+				</table>
+		</section>
+		<script src='/javascript/financeiro.js'></script>
+	</main>
+
+</body>
+
+</html>
